@@ -75,6 +75,10 @@ impl<T, S: TokenStream<T>> TokenBuffer<T, S> {
             self.buffer.insert(i, tokens.remove(0));
         }
     }
+
+    pub fn len(&self) -> usize {
+        self.buffer.len()
+    }
 }
 
 #[cfg(test)]
